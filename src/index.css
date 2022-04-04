@@ -10,6 +10,10 @@ code {
     monospace;
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 /* header search bar */
 
 .search__bar__wrapper {
