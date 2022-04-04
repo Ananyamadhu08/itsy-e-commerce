@@ -7,6 +7,7 @@ import Wishlist from "./routes/Wishlist";
 import Login from "./routes/Login";
 import Signup from "./routes/Signup";
 import Header from "./components/global/Header/Header";
+import Footer from "./components/global/Footer";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
       </Routes>
 
-      <footer></footer>
+      <Footer />
     </div>
   );
 }

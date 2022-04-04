@@ -1,4 +1,5 @@
 body {
+  background-color: var(--rose-200);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -74,3 +75,40 @@ code {
   width: 20%;
 }
 /* product page */
+
+/* word banner */
+@media only screen and (max-width: 1300px) {
+  .homepage-word-banner {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .homepage-word-banner {
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .homepage-word-banner {
+    font-size: 3.8rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .homepage-word-banner {
+    font-size: 3.4rem;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .homepage-word-banner {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .homepage-word-banner {
+    font-size: 2.5rem;
+  }
+}

@@ -7,7 +7,7 @@ function HeaderLeft() {
       <Link to="/">
         <h5 className="h5 cursor-pointer mr-10 text-rose-500 logo text-small text-italic inline-flex justify-center align-items-center">
           {/* <img src="" alt="logo" class="w-14 h-14" /> */}
-          Fusion
+          Itsy
         </h5>
       </Link>
 
