@@ -3,7 +3,6 @@ import React from "react";
 function FeaturedBrands() {
   return (
     <div className="bg-rose-300 w-full p-16">
-      {/* <!-- featured brands --> */}
       <h3 className="h3 font-semibold text-center text-slate-900 mb-1">
         Featured Brands
       </h3>
