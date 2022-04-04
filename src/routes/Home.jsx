@@ -32,9 +32,6 @@ function Home() {
       <div className="spacer-3rem"></div>
       <div className="spacer-3rem"></div>
       <div className="spacer-3rem"></div>
-      <div className="spacer-3rem"></div>
-      <div className="spacer-3rem"></div>
-      <div className="spacer-3rem"></div>
     </main>
     // <!-- main -->
   );

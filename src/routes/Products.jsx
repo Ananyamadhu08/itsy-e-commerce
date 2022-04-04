@@ -29,7 +29,6 @@ function Products() {
         <div className="spacer-3rem"></div>
         <div className="spacer-3rem"></div>
         <div className="spacer-3rem"></div>
-        <div className="spacer-3rem"></div>
       </div>
     </main>
   );

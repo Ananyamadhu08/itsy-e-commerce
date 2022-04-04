@@ -25,11 +25,11 @@ function ProductPageCard({ product }) {
           Knee length in flared hem Crepe fabric with concealed zip closure.
         </p>
         <div className="flex justify-around">
-          <button className="btn btn-square-solid btn-xs bg-slate-900  text-white mr-3 text-xl">
-            <span className="fas fa-shopping-cart"></span>Add to cart
+          <button className="btn btn-square-solid btn-xs bg-slate-900  text-rose-200 mr-3 text-2xl font-bold">
+            <span className="fas fa-shopping-cart"></span>add to cart
           </button>
-          <button className="btn btn-square-solid btn-xs bg-slate-900 text-white text-xl">
-            <span className="fas fa-heart"></span>Add to wishlist
+          <button className="btn btn-square-solid btn-xs bg-slate-900 text-rose-200 text-2xl font-bold">
+            <span className="fas fa-heart"></span> add to wishlist
           </button>
         </div>
       </div>
