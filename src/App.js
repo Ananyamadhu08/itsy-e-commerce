@@ -10,6 +10,8 @@ import Signup from "./routes/Signup";
 import Footer from "./components/global/Footer";
 import Header from "./components/global/Header/Header";
 
+import Mockman from "mockman-js";
+
 function App() {
   return (
     <div className="App">
@@ -22,6 +24,7 @@ function App() {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/mockman" element={<Mockman />} />
       </Routes>
 
       <Footer />
