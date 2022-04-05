@@ -16,22 +16,22 @@ function FeaturedCategories() {
       >
         <div className="h-52 w-52  rounded-2xl shadow-xl flex justify-center align-items-center cursor-pointer home__page__brand__logo bg-slate-900">
           <h3 className="text-2xl text-rose-500 shadown-2xl p-2 w-full font-semibold">
-            pens & markers
+            paints & watercolors
           </h3>
         </div>
         <div className="h-52 w-52  rounded-2xl shadow-xl flex justify-center align-items-center cursor-pointer home__page__brand__logo bg-slate-900">
           <h3 className="text-2xl text-rose-500 shadown-2xl p-2 w-full font-semibold">
-            paints & watercolors
+            crafting & art tools
           </h3>
         </div>
         <div className="h-52 w-52 rounded-2xl shadow-xl flex justify-center align-items-center cursor-pointer home__page__brand__logo bg-slate-900">
           <h3 className="text-2xl text-rose-500 shadown-2xl p-2 w-full font-semibold">
-            crayons & pencils
+            pens & pencils
           </h3>
         </div>
         <div className="h-52 w-52 rounded-2xl shadow-xl flex justify-center align-items-center cursor-pointer home__page__brand__logo bg-slate-900">
           <h3 className="text-2xl text-rose-500 shadown-2xl p-2 w-full font-semibold">
-            notebooks & notepads
+            school & stationery
           </h3>
         </div>
       </div>

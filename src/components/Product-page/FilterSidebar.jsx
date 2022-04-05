@@ -25,19 +25,19 @@ function FilterSidebar() {
         <li className="pb-3">
           <label className="text-white text-lg">
             <input type="checkbox" className="mr-3" id="" />
+            art tools
+          </label>
+        </li>
+        <li className="pb-3">
+          <label className="text-white text-lg">
+            <input type="checkbox" className="mr-3" id="" />
             pens
           </label>
         </li>
         <li className="pb-3">
           <label className="text-white text-lg">
             <input type="checkbox" className="mr-3" id="" />
-            crayons
-          </label>
-        </li>
-        <li className="pb-3">
-          <label className="text-white text-lg">
-            <input type="checkbox" className="mr-3" id="" />
-            notebooks
+            stationery
           </label>
         </li>
       </ul>
