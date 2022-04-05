@@ -64,9 +64,12 @@ function SignupPage() {
           </div>
 
           <div className="flex">
-            <div className="m-auto">
-              <button className="px-4 py-1 text-lg bg-rose-500 rounded text-slate-900 bg-hover-rose-800 text-hover-rose-200">
-                Sign Up
+            <div className="m-auto flex flex-col" style={{ gap: "1.5rem" }}>
+              <button className="px-4 py-1 text-lg bg-rose-500 rounded text-slate-900 w-full bg-hover-rose-800 text-hover-rose-200">
+                sign up
+              </button>
+              <button className="px-4 w-full py-1 text-lg bg-rose-500 rounded text-slate-900 bg-hover-rose-800 text-hover-rose-200">
+                sign up with test credentials
               </button>
             </div>
           </div>

@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 
 function LoginPage() {
   return (
-    <main
-      className="relative w-full"
-      style={{ top: "5rem", minHeight: "100vh" }}
-    >
+    <main className="relative" style={{ top: "5rem", minHeight: "100vh" }}>
       <div className="h-screen flex justify-center">
         <div
           style={{ margin: "auto" }}
@@ -64,9 +61,12 @@ function LoginPage() {
           </div>
 
           <div className="flex">
-            <div className="m-auto">
-              <button className="px-4 py-1 text-lg bg-rose-500 rounded text-slate-900 bg-hover-rose-800 text-hover-rose-200">
-                Login
+            <div className="m-auto flex flex-col" style={{ gap: "1.5rem" }}>
+              <button className="px-4 py-1 text-lg bg-rose-500 rounded text-slate-900 w-full bg-hover-rose-800 text-hover-rose-200">
+                login
+              </button>
+              <button className="px-4 w-full py-1 text-lg bg-rose-500 rounded text-slate-900 bg-hover-rose-800 text-hover-rose-200">
+                login with test credentials
               </button>
             </div>
           </div>
