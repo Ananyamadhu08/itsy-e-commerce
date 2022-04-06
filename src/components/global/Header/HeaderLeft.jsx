@@ -12,7 +12,9 @@ function HeaderLeft() {
       </Link>
 
       <Link to="/">
-        <h6 className="mr-6 cursor-pointer h6 text-rose-500">Home</h6>
+        <h6 className="mr-6 cursor-pointer h6 text-white text-hover-rose-500">
+          Home
+        </h6>
       </Link>
       <Link to="/products">
         <h6 className="mr-6 cursor-pointer h6 text-white text-hover-rose-500">

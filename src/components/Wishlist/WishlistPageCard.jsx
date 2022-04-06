@@ -1,6 +1,6 @@
 import React from "react";
 
-function ProductPageCard({ product }) {
+function WishlistPageCard() {
   return (
     <div className="shadow-2xl rounded flex flex-col relative w-72 mb-12 ml-12 bg-rose-200">
       <div className="h-72">
@@ -25,11 +25,11 @@ function ProductPageCard({ product }) {
           Knee length in flared hem Crepe fabric with concealed zip closure.
         </p>
         <div className="flex justify-around">
-          <button className="btn btn-square-solid btn-xs bg-slate-900  text-rose-200 mr-3 text-2xl font-bold">
+          <button className="btn btn-square-solid btn-xs bg-slate-900  text-rose-200 mr-3 font-bold text-2xl">
             <span className="fas fa-shopping-cart"></span>add to cart
           </button>
-          <button className="btn btn-square-solid btn-xs bg-slate-900 text-rose-200 text-2xl font-bold">
-            <span className="fas fa-heart"></span> add to wishlist
+          <button className="btn btn-square-solid btn-xs bg-slate-900 text-rose-200 text-2xl">
+            <span className="fa-solid fa-trash-can"></span>remove from wishlist
           </button>
         </div>
       </div>
@@ -37,4 +37,4 @@ function ProductPageCard({ product }) {
   );
 }
 
-export default ProductPageCard;
+export default WishlistPageCard;
