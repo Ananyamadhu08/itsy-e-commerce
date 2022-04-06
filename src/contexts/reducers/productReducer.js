@@ -10,7 +10,7 @@ export const productReducer = (state, action) => {
     case productActions.ERROR:
       return { ...state, error: payload, loading: false };
 
-    case productActions.GET_PRODUCTS_SUCCESSFULL:
+    case productActions.GET_PRODUCTS_SUCCESS:
       return {
         ...state,
         products: payload,
