@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/providers/AuthProvider";
 import { loginUser } from "../../utils/authUtils";
 
@@ -9,6 +9,7 @@ const intUserData = {
 };
 
 function LoginPage() {
+  const navigateCallback = useNavigate();
   const { authState, authDispatch } = useAuth();
   const [userData, setUserData] = useState(intUserData);
   const handleChange = (e) => {
@@ -93,7 +94,26 @@ function LoginPage() {
               >
                 login
               </button>
-              <button className="px-4 w-full py-1 text-lg bg-rose-500 rounded text-slate-900 bg-hover-rose-800 text-hover-rose-200">
+              <button
+                className="px-4 w-full py-1 text-lg bg-rose-500 rounded text-slate-900 bg-hover-rose-800 text-hover-rose-200"
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  setUserData({
+                    email: "johnDoe@gmail.com",
+                    password: "johnDoe321",
+                  });
+
+                  loginUser(
+                    {
+                      email: "johnDoe@gmail.com",
+                      password: "johnDoe321",
+                    },
+                    authDispatch,
+                    navigateCallback
+                  );
+                }}
+              >
                 login with test credentials
               </button>
             </div>

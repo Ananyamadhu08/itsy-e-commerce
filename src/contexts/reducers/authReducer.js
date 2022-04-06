@@ -29,6 +29,10 @@ export const authReducer = (state, action) => {
         encodedToken: payload.encodedToken,
         loading: false,
       };
+    case authActions.LOGOUT_SUCCESS:
+      window.localStorage.removeItem("itsy_JWT_token");
+
+      return { ...state, loading: false, user: {}, encodedToken: null };
 
     default:
       return state;

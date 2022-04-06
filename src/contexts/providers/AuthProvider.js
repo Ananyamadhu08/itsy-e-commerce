@@ -1,4 +1,5 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
+import { authActions } from "../constants/authConstants";
 import { authReducer } from "../reducers/authReducer";
 
 const AuthContext = createContext();
@@ -12,6 +13,16 @@ const authIntState = {
 export const AuthProvider = ({ children }) => {
   const [authState, authDispatch] = useReducer(authReducer, authIntState);
 
+  useEffect(() => {
+    let encodedToken = localStorage.getItem("itsy_JWT_token");
+
+    if (encodedToken) {
+      authDispatch({
+        type: authActions.LOGIN_SUCCESS,
+        payload: { user: {}, encodedToken },
+      });
+    }
+  }, []);
   console.log(authState);
   return (
     <AuthContext.Provider value={{ authState, authDispatch }}>

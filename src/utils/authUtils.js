@@ -1,7 +1,8 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { authActions } from "../contexts/constants/authConstants";
 
-export const signupUser = async (userData, authDispatch) => {
+export const signupUser = async (userData, authDispatch, navigateCallback) => {
   try {
     authDispatch({ type: authActions.LOADING });
 
@@ -17,6 +18,8 @@ export const signupUser = async (userData, authDispatch) => {
         type: authActions.SIGNUP_SUCCESS,
         payload: { createdUser, encodedToken },
       });
+
+      navigateCallback("/");
     }
   } catch (error) {
     authDispatch({
@@ -26,7 +29,7 @@ export const signupUser = async (userData, authDispatch) => {
   }
 };
 
-export const loginUser = async (userData, authDispatch) => {
+export const loginUser = async (userData, authDispatch, navigateCallback) => {
   try {
     authDispatch({ type: authActions.LOADING });
 
@@ -42,6 +45,8 @@ export const loginUser = async (userData, authDispatch) => {
         type: authActions.LOGIN_SUCCESS,
         payload: { foundUser, encodedToken },
       });
+
+      navigateCallback("/");
     }
   } catch (error) {
     authDispatch({
