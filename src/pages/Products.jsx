@@ -1,5 +1,5 @@
 import React from "react";
-import FilterSidebar from "../components/Product-page/FilterSidebar";
+import FilterSidebar from "../components/Product-page/filters/FilterSidebar";
 import SortProductsDropdown from "../components/Product-page/SortProductsDropdown";
 import ProductPageCard from "../components/Product-page/ProductPageCard";
 import { useProduct } from "../contexts/providers/ProductProvider";

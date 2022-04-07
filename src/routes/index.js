@@ -1,2 +1,2 @@
 import { default as WebsiteRoutes } from "./WebsiteRoutes";
-import { default as PrivatRoutes } from "./PrivateRoutes";
+import { default as PrivateRoutes } from "./PrivateRoutes";

@@ -8,9 +8,7 @@ function SortProductsDropdown() {
 
         <div className="custom-select m-16">
           <select className="bg-slate-900 text-white text-xl">
-            <option selected disable>
-              Choose a filter
-            </option>
+            <option>Choose a filter</option>
             <option value="">1</option>
             <option value="">2</option>
             <option value="">3</option>

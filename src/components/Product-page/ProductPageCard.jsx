@@ -29,8 +29,8 @@ function ProductPageCard({ product }) {
         <div className="spacer-3rem"></div>
 
         <div
-          className="flex m-auto absolute"
-          style={{ bottom: "1rem", right: "2rem" }}
+          className=" m-auto absolute flex"
+          style={{ bottom: "1rem", right: "1.5rem", gap: "1rem" }}
         >
           <button className="btn btn-square-solid btn-xs bg-slate-900  text-rose-200 mr-3 text-2xl font-bold">
             <span className="fas fa-shopping-cart"></span>add to cart
