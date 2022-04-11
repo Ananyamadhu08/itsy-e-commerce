@@ -17,7 +17,7 @@ function FiltersByBrand() {
           value={filtersState.brands[item.toLowerCase()]}
           onChange={() =>
             filtersDispatch({
-              type: filterActions.FILTER_BY_BRANDS,
+              type: filterActions.FILTER_BY_BRAND,
               payload: item.toLowerCase(),
             })
           }
