@@ -48,3 +48,25 @@ export const addCartItem = async (encodedToken, product, cartDispatch) => {
     cartDispatch({ type: cartActions.ERROR, payload: error });
   }
 };
+
+export const deleteCartItem = async (encodedToken, productId, cartDispatch) => {
+  try {
+    cartDispatch({ type: cartActions.LOADING });
+
+    const {
+      data: { cart },
+      status,
+    } = await axios.delete(`api/user/cart/${productId}`, {
+      headers: { authorization: encodedToken },
+    });
+
+    if (status >= 200 && status < 300) {
+      cartDispatch({
+        type: cartActions.DELETE_ITEM_FROM_CART,
+        payload: cart,
+      });
+    }
+  } catch (error) {
+    cartDispatch({ type: cartActions.ERROR, payload: error });
+  }
+};

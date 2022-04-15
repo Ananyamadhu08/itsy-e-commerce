@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/providers/AuthProvider";
 import { useCart } from "../../contexts/providers/CartProvider";
 import { addCartItem } from "../../utils/cartUtils";
@@ -8,7 +9,13 @@ function ProductPageCard({ product }) {
     authState: { encodedToken },
   } = useAuth();
 
-  const { cartDispatch } = useCart();
+  const {
+    cartState: { cart },
+    cartDispatch,
+  } = useCart();
+
+  const isInCart = cart.find((item) => item._id === product._id);
+
   return (
     <div className="shadow-2xl rounded flex flex-col relative w-72 mb-12 ml-12 bg-rose-200">
       <div className="h-72">
@@ -41,13 +48,23 @@ function ProductPageCard({ product }) {
           className=" m-auto absolute flex"
           style={{ bottom: "1rem", right: "1.5rem", gap: "1rem" }}
         >
-          <button
-            onClick={() => addCartItem(encodedToken, product, cartDispatch)}
-            className="btn btn-square-solid btn-xs bg-slate-900  text-rose-200 mr-3 text-2xl font-bold"
-          >
-            <span className="fas fa-shopping-cart"></span>add to cart
-          </button>
-          <button className="btn btn-square-solid btn-xs bg-slate-900 text-rose-200 text-2xl font-bold">
+          {isInCart ? (
+            <Link
+              className="btn btn-square-solid btn-xs bg-slate-900  text-white mr-3 text-2xl font-bold"
+              to="/cart"
+            >
+              <span className="fas fa-shopping-cart"></span>
+              go to cart
+            </Link>
+          ) : (
+            <button
+              onClick={() => addCartItem(encodedToken, product, cartDispatch)}
+              className="btn btn-square-solid btn-xs bg-slate-900  text-white mr-3 text-2xl font-bold"
+            >
+              <span className="fas fa-shopping-cart"></span>add to cart
+            </button>
+          )}
+          <button className="btn btn-square-solid btn-xs bg-slate-900 text-white text-2xl font-bold">
             <span className="fas fa-heart"></span> add to wishlist
           </button>
         </div>
