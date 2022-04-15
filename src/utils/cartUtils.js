@@ -70,3 +70,69 @@ export const deleteCartItem = async (encodedToken, productId, cartDispatch) => {
     cartDispatch({ type: cartActions.ERROR, payload: error });
   }
 };
+
+export const incrementCartItemQty = async (
+  encodedToken,
+  productId,
+  cartDispatch
+) => {
+  cartDispatch({ type: cartActions.LOADING });
+
+  const {
+    data: { cart },
+    status,
+  } = await axios.post(
+    `api/user/cart/${productId}`,
+    {
+      action: { type: "increment" },
+    },
+    {
+      headers: { authorization: encodedToken },
+    }
+  );
+
+  if (status >= 200 && status < 300) {
+    cartDispatch({
+      type: cartActions.UPDATE_CART_ITEM_QTY,
+      payload: cart,
+    });
+  }
+
+  try {
+  } catch (error) {
+    cartDispatch({ type: cartActions.ERROR, payload: error });
+  }
+};
+
+export const decrementCartItemQty = async (
+  encodedToken,
+  productId,
+  cartDispatch
+) => {
+  cartDispatch({ type: cartActions.LOADING });
+
+  const {
+    data: { cart },
+    status,
+  } = await axios.post(
+    `api/user/cart/${productId}`,
+    {
+      action: { type: "decrement" },
+    },
+    {
+      headers: { authorization: encodedToken },
+    }
+  );
+
+  if (status >= 200 && status < 300) {
+    cartDispatch({
+      type: cartActions.UPDATE_CART_ITEM_QTY,
+      payload: cart,
+    });
+  }
+
+  try {
+  } catch (error) {
+    cartDispatch({ type: cartActions.ERROR, payload: error });
+  }
+};
