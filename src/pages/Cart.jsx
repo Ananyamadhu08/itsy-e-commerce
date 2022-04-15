@@ -2,8 +2,12 @@ import React from "react";
 import AddressBox from "../components/Cart-page/AddressBox";
 import CartPageCard from "../components/Cart-page/CartPageCard";
 import OrderSummary from "../components/Cart-page/OrderSummary";
+import { useCart } from "../contexts/providers/CartProvider";
 
 function Cart() {
+  const {
+    cartState: { cart },
+  } = useCart();
   return (
     <main className="relative " style={{ top: "5rem", minHeight: "100vh" }}>
       <div className="spacer-3rem"></div>
@@ -13,7 +17,7 @@ function Cart() {
         style={{ margin: "0 auto" }}
         className="text-2xl font-semibold rounded-md opacity-80 text-white text-center bg-slate-900 w-max p-5"
       >
-        Cart: 6
+        Cart: {cart.length}
       </h3>
 
       <div className="spacer-3rem"></div>
@@ -27,12 +31,10 @@ function Cart() {
             style={{ gap: "3rem", maxWidth: "400rem" }}
             className="flex flex-row flex-wrap ml-16"
           >
-            <CartPageCard />
-            <CartPageCard />
-            <CartPageCard />
-            <CartPageCard />
-            <CartPageCard />
-            <CartPageCard />
+            {cart &&
+              cart.map((product, i) => (
+                <CartPageCard product={product} key={i} />
+              ))}
           </div>
         </div>
 
