@@ -6,7 +6,7 @@ import App from "./App";
 import { makeServer } from "./server";
 import { AuthProvider } from "./contexts/providers/AuthProvider";
 import { ProductProvider } from "./contexts/providers/ProductProvider";
-import FiltersProvider from "./contexts/providers/FiltersProvider";
+import { FiltersProvider } from "./contexts/providers/FiltersProvider";
 
 // Call make Server
 makeServer();

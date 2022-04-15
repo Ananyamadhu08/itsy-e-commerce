@@ -3,13 +3,14 @@ import FilterSidebar from "../components/Product-page/filters/FilterSidebar";
 import SortProductsDropdown from "../components/Product-page/SortProductsDropdown";
 import ProductPageCard from "../components/Product-page/ProductPageCard";
 import { useProduct } from "../contexts/providers/ProductProvider";
+import { useFilters } from "../contexts/providers/FiltersProvider";
 
 function Products() {
   const {
     productState: { products },
   } = useProduct();
 
-  console.log(products);
+  const { sortedProducts } = useFilters();
 
   return (
     <main
@@ -25,8 +26,8 @@ function Products() {
           className="grid grid-cols-3  mr-20"
           style={{ gap: "4rem", marginTop: "-2rem" }}
         >
-          {products &&
-            products.map((product, i) => (
+          {sortedProducts &&
+            sortedProducts.map((product, i) => (
               <ProductPageCard product={product} key={i} />
             ))}
         </div>

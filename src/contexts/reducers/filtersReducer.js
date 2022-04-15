@@ -1,4 +1,3 @@
-import React from "react";
 import { filterActions } from "../constants/filtersConstants";
 
 export const filtersReducer = (state, action) => {
@@ -21,7 +20,7 @@ export const filtersReducer = (state, action) => {
     case filterActions.FILTER_BY_RATING:
       return {
         ...state,
-        ratingsLessThan: payload,
+        ratingLessThan: payload,
       };
     case filterActions.SORT_BY:
       return {

@@ -5,8 +5,6 @@ export const filterByCategory = (products, categoriesFilter) => {
     (category) => !category
   );
 
-  console.log(noFilterSelected);
-
   if (noFilterSelected) return products;
 
   for (let category in categoriesFilter) {

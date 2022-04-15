@@ -16,8 +16,6 @@ export const ProductProvider = ({ children }) => {
     intialState
   );
 
-  console.log(productState);
-
   useEffect(() => {
     getProducts(productDispatch);
   }, []);
