@@ -1,15 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { authActions } from "../../../contexts/constants/authConstants";
+import { useAuth } from "../../../contexts/providers/AuthProvider";
 
 function HeaderRight() {
+  const {
+    authState: { encodedToken },
+    authDispatch,
+  } = useAuth();
+
   return (
     <div className="flex justify-center align-items-center">
-      <Link
-        to="/login"
-        className="btn btn-square-solid btn-md text-white bg-rose-600 btn-bg-hover-rose-800 mr-7"
-      >
-        LOGIN
-      </Link>
+      {encodedToken ? (
+        <div
+          onClick={() => authDispatch({ type: authActions.LOGOUT_SUCCESS })}
+          className="btn btn-square-solid btn-md text-white bg-rose-600 btn-bg-hover-rose-800 mr-7"
+        >
+          LOGOUT
+        </div>
+      ) : (
+        <Link
+          to="/login"
+          className="btn btn-square-solid btn-md text-white bg-rose-600 btn-bg-hover-rose-800 mr-7"
+        >
+          LOGIN
+        </Link>
+      )}
 
       <Link to="/wishlist">
         <span className="w-full h-full tooltip btn-icon badge-container mr-3">

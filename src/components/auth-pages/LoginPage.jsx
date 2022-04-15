@@ -1,7 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../contexts/providers/AuthProvider";
+import { loginUser } from "../../utils/authUtils";
+
+const intUserData = {
+  email: "",
+  password: "",
+};
 
 function LoginPage() {
+  const navigateCallback = useNavigate();
+  const { authState, authDispatch } = useAuth();
+  const [userData, setUserData] = useState(intUserData);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setUserData({ ...userData, [name]: value });
+  };
+
+  console.log(userData);
   return (
     <main className="relative" style={{ top: "5rem", minHeight: "100vh" }}>
       <div className="h-screen flex justify-center">
@@ -13,32 +30,38 @@ function LoginPage() {
             Login
           </h3>
 
-          <div className="input-container mb-7">
+          <div className="input-container mb-7 text-rose-200">
             <input
+              name="email"
               type="text"
               id="email"
               className="input input-white-hover input-rose-focus"
-              autocomplete="off"
+              autoComplete="off"
               placeholder=" "
+              onChange={handleChange}
+              value={userData.email}
             />
             <label
-              for="email"
+              htmlFor="email"
               className="input-label text-rose-200 bg-slate-900"
             >
               Email
             </label>
           </div>
 
-          <div className="input-container mb-7">
+          <div className="input-container mb-7 text-rose-200">
             <input
+              name="password"
               type="text"
-              id="email"
+              id="password"
               className="input input-white-hover input-rose-focus"
-              autocomplete="off"
+              autoComplete="off"
               placeholder=" "
+              onChange={handleChange}
+              value={userData.password}
             />
             <label
-              for="email"
+              htmlFor="email"
               className="input-label text-rose-200 bg-slate-900"
             >
               Password
@@ -62,10 +85,35 @@ function LoginPage() {
 
           <div className="flex">
             <div className="m-auto flex flex-col" style={{ gap: "1.5rem" }}>
-              <button className="px-4 py-1 text-lg bg-rose-500 rounded text-slate-900 w-full bg-hover-rose-800 text-hover-rose-200">
+              <button
+                className="px-4 py-1 text-lg bg-rose-500 rounded text-slate-900 w-full bg-hover-rose-800 text-hover-rose-200"
+                onClick={(e) => {
+                  e.preventDefault();
+                  loginUser(userData, authDispatch);
+                }}
+              >
                 login
               </button>
-              <button className="px-4 w-full py-1 text-lg bg-rose-500 rounded text-slate-900 bg-hover-rose-800 text-hover-rose-200">
+              <button
+                className="px-4 w-full py-1 text-lg bg-rose-500 rounded text-slate-900 bg-hover-rose-800 text-hover-rose-200"
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  setUserData({
+                    email: "johnDoe@gmail.com",
+                    password: "johnDoe321",
+                  });
+
+                  loginUser(
+                    {
+                      email: "johnDoe@gmail.com",
+                      password: "johnDoe321",
+                    },
+                    authDispatch,
+                    navigateCallback
+                  );
+                }}
+              >
                 login with test credentials
               </button>
             </div>
