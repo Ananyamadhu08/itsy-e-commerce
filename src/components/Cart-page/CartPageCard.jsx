@@ -1,11 +1,13 @@
 import React from "react";
 import { useAuth } from "../../contexts/providers/AuthProvider";
 import { useCart } from "../../contexts/providers/CartProvider";
+import { useWishlist } from "../../contexts/providers/WishlistProvider";
 import {
   incrementCartItemQty,
   decrementCartItemQty,
   deleteCartItem,
 } from "../../utils/cartUtils";
+import { addProductToWishilist } from "../../utils/wishlistUtils";
 
 function CartPageCard({ product }) {
   const {
@@ -13,7 +15,7 @@ function CartPageCard({ product }) {
   } = useAuth();
   const { cartDispatch } = useCart();
 
-  console.log(product._id);
+  const { wishlistDispatch } = useWishlist();
 
   return (
     <div className="shadow-2xl rounded flex flex-col relative w-72 mb-12 ml-12 bg-rose-200">
@@ -70,11 +72,16 @@ function CartPageCard({ product }) {
           className=" m-auto absolute flex"
           style={{ bottom: "0.5rem", right: "0.6rem", gap: "0.6rem" }}
         >
-          <button className="btn btn-square-solid btn-xs bg-slate-900  text-rose-200 mr-3 font-bold text-2xl">
+          <button
+            onClick={() =>
+              addProductToWishilist(encodedToken, product, wishlistDispatch)
+            }
+            className="btn btn-square-solid btn-xs bg-slate-900  text-white mr-3 font-bold text-2xl"
+          >
             <span className="fas fa-heart"></span>add to wishlist
           </button>
           <button
-            className="btn btn-square-solid btn-xs bg-slate-900 text-rose-200 text-2xl"
+            className="btn btn-square-solid btn-xs bg-slate-900 text-white text-2xl"
             onClick={() =>
               deleteCartItem(encodedToken, product._id, cartDispatch)
             }

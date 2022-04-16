@@ -1,4 +1,6 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useEffect } from "react";
+import { getWishlistItems } from "../../utils/wishlistUtils";
+import { wishlistReducer } from "../reducers/wishlistReducer";
 
 const WishlistContext = createContext();
 
@@ -10,15 +12,23 @@ const intialState = {
 
 export const WishlistProvider = ({ children }) => {
   const [wishlistState, wishlistDispatch] = useReducer(
-    intialState,
-    wishlistReducer
+    wishlistReducer,
+    intialState
   );
 
+  useEffect(() => {
+    let encodedToken = localStorage.getItem("itsy_JWT_token");
+
+    getWishlistItems(encodedToken, wishlistDispatch);
+  }, []);
+
+  console.log(wishlistState);
+
   return (
-    <WishlistContext.Provider value={(wishlistState, wishlistDispatch)}>
+    <WishlistContext.Provider value={{ wishlistState, wishlistDispatch }}>
       {children}
     </WishlistContext.Provider>
   );
 };
 
-export const useWishlist = () => useContext();
+export const useWishlist = () => useContext(WishlistContext);

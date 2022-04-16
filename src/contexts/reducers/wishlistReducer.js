@@ -6,8 +6,10 @@ export const wishlistReducer = (state, action) => {
   switch (type) {
     case wishlistActions.LOADING:
       return { ...state, loading: true };
+
     case wishlistActions.ERROR:
       return { ...state, error: payload, loading: false };
+
     case wishlistActions.GET_ALL_WISHLIST:
       return {
         ...state,

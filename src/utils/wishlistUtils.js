@@ -1,4 +1,5 @@
 import axios from "axios";
+import { wishlistActions } from "../contexts/constants/wishlistConstants";
 
 export const getWishlistItems = async (encodedToken, wishlistDispatch) => {
   try {
@@ -35,10 +36,10 @@ export const addProductToWishilist = async (
       status,
     } = await axios.post(
       "api/user/wishlist",
+      { product: product },
       {
         headers: { authorization: encodedToken },
-      },
-      { product }
+      }
     );
 
     if (status >= 200 && status < 300) {
