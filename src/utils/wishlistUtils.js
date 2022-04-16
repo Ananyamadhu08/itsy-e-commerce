@@ -51,3 +51,29 @@ export const addProductToWishilist = async (
     wishlistDispatch({ type: wishlistActions.ERROR, payload: error });
   }
 };
+
+export const deleteWishilistItem = async (
+  encodedToken,
+  productId,
+  wishlistDispatch
+) => {
+  try {
+    wishlistDispatch({ type: wishlistActions.LOADING });
+
+    const {
+      data: { wishlist },
+      status,
+    } = await axios.delete(`api/user/wishlist/${productId}`, {
+      headers: { authorization: encodedToken },
+    });
+
+    if (status >= 200 && status < 300) {
+      wishlistDispatch({
+        type: wishlistActions.REMOVE_PRODUCT_FROM_WISHLIST,
+        payload: wishlist,
+      });
+    }
+  } catch (error) {
+    wishlistDispatch({ type: wishlistActions.ERROR, payload: error });
+  }
+};
