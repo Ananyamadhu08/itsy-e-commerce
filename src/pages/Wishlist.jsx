@@ -1,7 +1,12 @@
 import React from "react";
 import WishlistPageCard from "../components/Wishlist/WishlistPageCard";
+import { useWishlist } from "../contexts/providers/WishlistProvider";
 
 function Wishlist() {
+  const {
+    wishlistState: { wishlist },
+  } = useWishlist();
+
   return (
     <main
       className="relative w-full"
@@ -14,7 +19,7 @@ function Wishlist() {
         style={{ margin: "0 auto" }}
         className="text-2xl font-semibold rounded-md opacity-80 text-white text-center bg-slate-900 w-max p-5"
       >
-        Wishlist: 6
+        Wishlist: {wishlist.length}
       </h3>
 
       <div className="spacer-3rem"></div>
@@ -23,12 +28,10 @@ function Wishlist() {
         className=" mt-9 grid grid-cols-3  ml-16"
         style={{ minWidth: "980px", gap: "1rem" }}
       >
-        <WishlistPageCard />
-        <WishlistPageCard />
-        <WishlistPageCard />
-        <WishlistPageCard />
-        <WishlistPageCard />
-        <WishlistPageCard />
+        {wishlist &&
+          wishlist.map((product, i) => (
+            <WishlistPageCard product={product} key={i} />
+          ))}
       </div>
 
       <div className="spacer-3rem"></div>

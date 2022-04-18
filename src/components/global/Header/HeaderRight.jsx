@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { authActions } from "../../../contexts/constants/authConstants";
 import { useAuth } from "../../../contexts/providers/AuthProvider";
 import { useCart } from "../../../contexts/providers/CartProvider";
-import { Cart } from "../../../pages";
+import { useWishlist } from "../../../contexts/providers/WishlistProvider";
 
 function HeaderRight() {
   const {
@@ -14,6 +14,10 @@ function HeaderRight() {
   const {
     cartState: { cart },
   } = useCart();
+
+  const {
+    wishlistState: { wishlist },
+  } = useWishlist();
 
   return (
     <div className="flex justify-center align-items-center">
@@ -40,7 +44,7 @@ function HeaderRight() {
             className="icon-badge-md bg-slate-100 text-black text-xs status-badge"
             style={{ bottom: "1.3rem" }}
           >
-            1
+            {wishlist.length}
           </span>
           <span className="tooltip-text text-black text-lg tooltip-text-bottom bg-rose-100">
             Wish List
