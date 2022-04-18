@@ -3,6 +3,7 @@ import { authActions } from "../constants/authConstants";
 import { authReducer } from "../reducers/authReducer";
 
 const AuthContext = createContext();
+
 const authIntState = {
   encodedToken: null,
   error: null,
@@ -23,7 +24,9 @@ export const AuthProvider = ({ children }) => {
       });
     }
   }, []);
-  console.log(authState);
+
+  // console.log(authState, "authState");
+
   return (
     <AuthContext.Provider value={{ authState, authDispatch }}>
       {children}

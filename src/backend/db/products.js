@@ -1,10 +1,5 @@
 import { v4 as uuid } from "uuid";
 
-/**
- * Product Database can be added here.
- * You can add products of your wish with different attributes
- * */
-
 export const products = [
   {
     _id: uuid(),
@@ -15,7 +10,7 @@ export const products = [
     discountPrice: 300,
     brand: "crayola",
     totalRating: 253,
-    totalStars: 4,
+    totalStars: 1,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173463/itsy-ecom/crayola_5_oz_pack_of_play_dough_pack_of_3_-_rs_299_u3urvj.webp",
     qty: 1,
     offers: {
@@ -35,7 +30,7 @@ export const products = [
     discountPrice: 1200,
     brand: "crayola",
     totalRating: 321,
-    totalStars: 4.5,
+    totalStars: 1,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173491/itsy-ecom/crayola_colour_pencils_set_of_24_-_rs_1117_mdf3da.webp",
     qty: 1,
     offers: {
@@ -55,7 +50,7 @@ export const products = [
     discountPrice: 1000,
     brand: "crayola",
     totalRating: 196,
-    totalStars: 3.5,
+    totalStars: 3,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173501/itsy-ecom/crayola_erasable_colored_pencils_set_of_10_-_rs990_f4qhmh.jpg",
     qty: 1,
     offers: {
@@ -75,7 +70,7 @@ export const products = [
     discountPrice: 1200,
     brand: "crayola",
     totalRating: 276,
-    totalStars: 4.5,
+    totalStars: 3,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173509/itsy-ecom/crayola_glitter_markers_pack_of_6_-_rs1019_slalnw.jpg",
     qty: 1,
     offers: {
@@ -95,7 +90,7 @@ export const products = [
     discountPrice: 1000,
     brand: "crayola",
     totalRating: 186,
-    totalStars: 4.5,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173516/itsy-ecom/crayola_paint_brushes_set_of_5_-_rs_1273_cnkmd2.webp",
     qty: 1,
     offers: {
@@ -115,7 +110,7 @@ export const products = [
     discountPrice: 1400,
     brand: "crayola",
     totalRating: 186,
-    totalStars: 4.5,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173537/itsy-ecom/crayola_set_of_48_construction_paper_-_rs_1312_cfqu0w.webp",
     qty: 1,
     offers: {
@@ -135,7 +130,7 @@ export const products = [
     discountPrice: 2100,
     brand: "crayola",
     totalRating: 300,
-    totalStars: 4.8,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173543/itsy-ecom/crayola_twistable_colored_pencils_set_of_50_-_rs_2163_xn2kkm.jpg",
     qty: 1,
     offers: {
@@ -155,7 +150,7 @@ export const products = [
     discountPrice: 2200,
     brand: "crayola",
     totalRating: 230,
-    totalStars: 3.8,
+    totalStars: 3,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173549/itsy-ecom/crayola_washable_markers_set_of_40_-_rs_1669_c8oiio.jpg",
     qty: 1,
     offers: {
@@ -195,7 +190,7 @@ export const products = [
     discountPrice: 1300,
     brand: "crayola",
     totalRating: 250,
-    totalStars: 4.5,
+    totalStars: 2,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173561/itsy-ecom/crayola_water_colors_with_paint_brush_set_of_24_-_rs1234_slcbof.webp",
     qty: 1,
     offers: {
@@ -235,7 +230,7 @@ export const products = [
     discountPrice: 300,
     brand: "faber castell",
     totalRating: 579,
-    totalStars: 4.8,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173577/itsy-ecom/Faber_castell_-_24_triangular_colour_pencis_p7xlfs.webp",
     qty: 1,
     offers: {
@@ -275,7 +270,7 @@ export const products = [
     discountPrice: 600,
     brand: "faber castell",
     totalRating: 438,
-    totalStars: 4.5,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173587/itsy-ecom/faber_castell_arcylic_colors_set_of_12_-_rs_520_rqbnbt.webp",
     qty: 1,
     offers: {
@@ -295,7 +290,7 @@ export const products = [
     discountPrice: 500,
     brand: "faber castell",
     totalRating: 534,
-    totalStars: 4.9,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173593/itsy-ecom/Faber_castell_colour_me_grip_pencil_set_of_48_d4ucfu.webp",
     qty: 1,
     offers: {
@@ -315,7 +310,7 @@ export const products = [
     discountPrice: 200,
     brand: "faber castell",
     totalRating: 234,
-    totalStars: 4.2,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173598/itsy-ecom/Faber_castell_multi_colored_markers_-_set_of_4_ri5fte.jpg",
     qty: 1,
     offers: {
@@ -335,7 +330,7 @@ export const products = [
     discountPrice: 100,
     brand: "faber castell",
     totalRating: 144,
-    totalStars: 3.8,
+    totalStars: 3,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173603/itsy-ecom/Faber_castell_notebook_-_160_pages_-_rs_100_ovx4wk.jpg",
     qty: 1,
     offers: {
@@ -355,7 +350,7 @@ export const products = [
     discountPrice: 600,
     brand: "faber castell",
     totalRating: 674,
-    totalStars: 4.3,
+    totalStars: 1,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173612/itsy-ecom/Faber_castell_pitt_artist_pen_color_pens_set_of_6_-_rs_600_esdtyk.webp",
     qty: 1,
     offers: {
@@ -375,7 +370,7 @@ export const products = [
     discountPrice: 1300,
     brand: "faber castell",
     totalRating: 345,
-    totalStars: 4.3,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173619/itsy-ecom/faber_castell_pitt_pencil_set_of_12_-_rs_1350_ktehb2.webp",
     qty: 1,
     offers: {
@@ -395,7 +390,7 @@ export const products = [
     discountPrice: 200,
     brand: "faber castell",
     totalRating: 185,
-    totalStars: 4,
+    totalStars: 2,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173626/itsy-ecom/faber_castell_poster_color_set_of_12_-_rs_185_xxzg8g.webp",
     qty: 1,
     offers: {
@@ -415,7 +410,7 @@ export const products = [
     discountPrice: 1000,
     brand: "faber castell",
     totalRating: 295,
-    totalStars: 3.5,
+    totalStars: 3,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173634/itsy-ecom/faber_castell_rollerball_pen_black_set_of_3_-_rs_900_dxsare.webp",
     qty: 1,
     offers: {
@@ -455,7 +450,7 @@ export const products = [
     discountPrice: 300,
     brand: "faber castell",
     totalRating: 428,
-    totalStars: 3.6,
+    totalStars: 3,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173644/itsy-ecom/faber-castell_whit_board_marker_-_rs_249_vveabl.webp",
     qty: 1,
     offers: {
@@ -475,7 +470,7 @@ export const products = [
     discountPrice: 200,
     brand: "maped",
     totalRating: 357,
-    totalStars: 4.5,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173655/itsy-ecom/maped_-_fine_liners_pack_of_10_-_rs_206_b5h1bf.webp",
     qty: 1,
     offers: {
@@ -495,7 +490,7 @@ export const products = [
     discountPrice: 100,
     brand: "maped",
     totalRating: 127,
-    totalStars: 3.9,
+    totalStars: 3,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173662/itsy-ecom/maped_18mm_cutter_-_rs_199_i27fhp.webp",
     qty: 1,
     offers: {
@@ -515,7 +510,7 @@ export const products = [
     discountPrice: 200,
     brand: "maped",
     totalRating: 327,
-    totalStars: 4.3,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173668/itsy-ecom/maped_brushes_set_of_4_-_rs_85_pclubk.webp",
     qty: 1,
     offers: {
@@ -535,7 +530,7 @@ export const products = [
     discountPrice: 200,
     brand: "maped",
     totalRating: 637,
-    totalStars: 4.6,
+    totalStars: 3,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173675/itsy-ecom/maped_geometry_box_-_rs_150_huykmc.webp",
     qty: 1,
     offers: {
@@ -555,7 +550,7 @@ export const products = [
     discountPrice: 100,
     brand: "maped",
     totalRating: 637,
-    totalStars: 4.6,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173680/itsy-ecom/maped_loopy_duo_eraser_sharpener_-_rs_105_jby0gj.webp",
     qty: 1,
     offers: {
@@ -575,7 +570,7 @@ export const products = [
     discountPrice: 200,
     brand: "maped",
     totalRating: 837,
-    totalStars: 4.8,
+    totalStars: 2,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173687/itsy-ecom/maped_pack_of_2_fountain_pen_-_rs_199_hcymee.webp",
     qty: 1,
     offers: {
@@ -595,7 +590,7 @@ export const products = [
     discountPrice: 100,
     brand: "maped",
     totalRating: 237,
-    totalStars: 3.9,
+    totalStars: 3,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173692/itsy-ecom/maped_stapler_-_rs_107_w86i4n.webp",
     qty: 1,
     offers: {
@@ -615,7 +610,7 @@ export const products = [
     discountPrice: 600,
     brand: "maped",
     totalRating: 734,
-    totalStars: 4.9,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173697/itsy-ecom/maped_triangular_shaped_color_pencils_-_rs_390_azdyfe.webp",
     qty: 1,
     offers: {
@@ -635,7 +630,7 @@ export const products = [
     discountPrice: 500,
     brand: "maped",
     totalRating: 122,
-    totalStars: 4,
+    totalStars: 1,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173704/itsy-ecom/maped-_classic_highlighter_metallic_colours_pack_of_4_-_rs_550_v7diw8.jpg",
     qty: 1,
     offers: {
@@ -655,7 +650,7 @@ export const products = [
     discountPrice: 1800,
     brand: "staedtler",
     totalRating: 347,
-    totalStars: 4.7,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173720/itsy-ecom/staedtler_acrylic_pain_tubes_set_of_24_-_rs_1800_nl6xnf.webp",
     qty: 1,
     offers: {
@@ -715,7 +710,7 @@ export const products = [
     discountPrice: 1000,
     brand: "staedtler",
     totalRating: 227,
-    totalStars: 4.8,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173736/itsy-ecom/staedtler_pencils_pack_of_12_-_rs_1099_qenqku.webp",
     qty: 1,
     offers: {
@@ -755,7 +750,7 @@ export const products = [
     discountPrice: 300,
     brand: "staedtler",
     totalRating: 278,
-    totalStars: 4.2,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173749/itsy-ecom/staedtler-_highlighters_pack_of_6_-_515_fuakso.webp",
     qty: 1,
     offers: {
@@ -775,7 +770,7 @@ export const products = [
     discountPrice: 700,
     brand: "staedtler",
     totalRating: 135,
-    totalStars: 3.6,
+    totalStars: 3,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173753/itsy-ecom/staedtler-_mars_single_pencil_tub_sharpeners_-_rs_950_rbdoif.webp",
     qty: 1,
     offers: {
@@ -795,7 +790,7 @@ export const products = [
     discountPrice: 900,
     brand: "staedtler",
     totalRating: 367,
-    totalStars: 4.8,
+    totalStars: 4,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173756/itsy-ecom/staedtler-_triplus_fineliner_pack_of_10_-_rs_990_hcjzkr.webp",
     qty: 1,
     offers: {
@@ -815,7 +810,7 @@ export const products = [
     discountPrice: 1300,
     brand: "staedtler",
     totalRating: 135,
-    totalStars: 4.6,
+    totalStars: 5,
     img: "https://res.cloudinary.com/dgl5z5ozi/image/upload/v1649173761/itsy-ecom/staedtler-pigment_liner_pack_of_8_with_pencil_-_1599_etqsik.webp",
     qty: 1,
     offers: {
