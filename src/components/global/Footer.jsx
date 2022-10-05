@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer
-      className="relative flex flex-col h-44 justify-center align-items-center w-full p-5 z-50 bg-rose-400"
+      className="relative flex flex-col h-32 justify-center align-items-center w-full p-5 z-50 bg-rose-400 text-sm"
       style={{ bottom: "0" }}
     >
       <div className="text-white flex">
@@ -27,7 +27,7 @@ function Footer() {
         </Link>
       </div>
 
-      <div className="text-white mt-5">
+      <div className="text-white mt-2">
         Designed using{" "}
         <Link
           to="https://fusion-css.netlify.app/"
