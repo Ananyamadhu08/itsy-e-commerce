@@ -87,6 +87,13 @@ code {
 }
 /* product page */
 
+/* cart page */
+
+.cart_page_card {
+  width: 19rem;
+  height: 34rem;
+}
+
 /* word banner */
 @media only screen and (max-width: 1300px) {
   .homepage-word-banner {

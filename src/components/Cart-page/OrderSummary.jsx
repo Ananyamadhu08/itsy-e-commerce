@@ -11,7 +11,7 @@ function OrderSummary() {
     authState: { encodedToken },
   } = useAuth();
 
-  const deliveryCharges = 199;
+  const deliveryCharges = 99;
 
   const totalPreviousPrice = cart.reduce(
     (acc, current) => acc + Number(current.price) * Number(current.qty),
