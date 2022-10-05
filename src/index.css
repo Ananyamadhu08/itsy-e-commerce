@@ -1,7 +1,7 @@
 @import "https://unpkg.com/mockman-js@latest/dist/style.css";
 
 body {
-  background-color: var(--rose-300);
+  background-color: #fff1f2;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,6 +71,11 @@ code {
 
 /* product page */
 
+.product_card {
+  width: 19rem;
+  height: 30.5rem;
+}
+
 .product__display__container {
   height: 100%;
   width: 80%;
@@ -81,6 +86,19 @@ code {
   width: 20%;
 }
 /* product page */
+
+/* cart page */
+
+.cart_page_card {
+  width: 20rem;
+  height: 34rem;
+}
+
+/* wishlist page */
+.wishlist_page_card {
+  width: 19rem;
+  height: 34rem;
+}
 
 /* word banner */
 @media only screen and (max-width: 1300px) {

@@ -9,43 +9,48 @@ function Cart() {
     cartState: { cart },
   } = useCart();
   return (
-    <main className="relative " style={{ top: "5rem", minHeight: "100vh" }}>
-      <div className="spacer-3rem"></div>
-      <div className="spacer-3rem"></div>
-
-      <h3
-        style={{ margin: "0 auto" }}
-        className="text-2xl font-semibold rounded-md opacity-80 text-white text-center bg-slate-900 w-max p-5"
-      >
-        Cart: {cart.length}
-      </h3>
-
-      <div className="spacer-3rem"></div>
-      <div className="spacer-3rem"></div>
-
-      <div style={{ margin: "auto" }} className="flex justify-center ">
-        <div style={{ borderRight: "1px dotted black" }} className="w-full p-5">
-          <AddressBox />
-
-          <div
-            style={{ gap: "3rem", maxWidth: "400rem" }}
-            className="flex flex-row flex-wrap ml-16"
+    <main className="relative " style={{ top: "7rem", minHeight: "100vh" }}>
+      {cart.length <= 0 ? (
+        <div className="text-center">Cart is empty, start shopping!</div>
+      ) : (
+        <div>
+          <h3
+            style={{ margin: "0 auto" }}
+            className="text-2xl font-semibold rounded-md opacity-80 text-white text-center bg-slate-900 w-max p-5"
           >
-            {cart &&
-              cart.map((product, i) => (
-                <CartPageCard product={product} key={i} />
-              ))}
+            Cart: {cart.length}
+          </h3>
+
+          <div className="spacer-3rem"></div>
+
+          <div style={{ margin: "auto" }} className="flex justify-center ">
+            <div
+              style={{ borderRight: "1px dotted black" }}
+              className="w-full px-6"
+            >
+              <AddressBox />
+
+              <div
+                style={{ gap: "3rem", maxWidth: "400rem" }}
+                className="flex flex-row flex-wrap ml-16"
+              >
+                {cart &&
+                  cart.map((product, i) => (
+                    <CartPageCard product={product} key={i} />
+                  ))}
+              </div>
+            </div>
+
+            <div className="w-40-percent h-max p-10 mx-10 bg-slate-900">
+              <OrderSummary />
+            </div>
           </div>
-        </div>
 
-        <div className="w-40-percent h-max p-10 mx-10 bg-slate-900">
-          <OrderSummary />
+          <div className="spacer-3rem"></div>
+          <div className="spacer-3rem"></div>
+          <div className="spacer-3rem"></div>
         </div>
-      </div>
-
-      <div className="spacer-3rem"></div>
-      <div className="spacer-3rem"></div>
-      <div className="spacer-3rem"></div>
+      )}
     </main>
   );
 }

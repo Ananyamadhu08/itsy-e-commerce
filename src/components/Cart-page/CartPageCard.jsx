@@ -7,7 +7,10 @@ import {
   decrementCartItemQty,
   deleteCartItem,
 } from "../../utils/cartUtils";
-import { addProductToWishilist } from "../../utils/wishlistUtils";
+import {
+  addProductToWishilist,
+  deleteWishilistItem,
+} from "../../utils/wishlistUtils";
 
 function CartPageCard({ product }) {
   const {
@@ -15,11 +18,16 @@ function CartPageCard({ product }) {
   } = useAuth();
   const { cartDispatch } = useCart();
 
-  const { wishlistDispatch } = useWishlist();
+  const {
+    wishlistState: { wishlist },
+    wishlistDispatch,
+  } = useWishlist();
+
+  const isInWishlist = wishlist.find((item) => item._id === product._id);
 
   return (
-    <div className="shadow-2xl rounded flex flex-col relative w-72 mb-12 ml-12 bg-rose-200">
-      <div className="h-72">
+    <div className="shadow-2xl rounded flex flex-col relative w-72 mb-12 ml-12 bg-rose-200 cart_page_card">
+      <div className="h-56">
         <img
           className="img-responsive rounded"
           style={{ height: "100%" }}
@@ -34,16 +42,24 @@ function CartPageCard({ product }) {
         )}
       </div>
 
-      <div className="p-3 mb-28">
-        <div>
-          <h3 className="text-grey-600 subtitle1 mb-2">{product.title}</h3>
-          <h4 className="subtitle2">{product.category}</h4>
-          <h5 className="text-grey-600 mb-4">{product.brand}</h5>
-          <h4 className="subtitle2 mb-6">total stars: {product.totalStars}</h4>
-          <p className="body1 mb-3">{product.description}</p>
-          <h4 className="text-line-through">Rs.{product.price}</h4>
-          <h2 className="mb-6">Rs.{product.discountPrice}</h2>
-        </div>
+      <div className="p-4">
+        <h3 className="text-sm mb-1 text-grey-800">{product.title}</h3>
+        <h4 className="text-grey-800 text-sm mb-1">{product.category}</h4>
+        <h5 className="text-grey-800 text-sm mb-1">{product.brand}</h5>
+        <h4 className="text-sm mb-2 text-grey-800">
+          total stars: {product.totalStars}
+        </h4>
+        <h4 className="text-sm mb-2 text-grey-900">{product.description}</h4>
+
+        <h4 className="text-line-through text-sm text-grey-600">
+          Rs.{product.price}
+        </h4>
+        <h2 className="mb-3 text-md">Rs.{product.discountPrice}</h2>
+
+        <div
+          className="absolute flex"
+          style={{ bottom: "1rem", gap: "0.6rem", alignItems: "center" }}
+        ></div>
 
         <div className="mb-2 ml-1 absolute" style={{ bottom: "3.5rem" }}>
           <h5 className="mb-2">Quantity: {product.qty}</h5>
@@ -60,26 +76,39 @@ function CartPageCard({ product }) {
             <button
               className="bg-rose-300 btn-xs"
               style={{ border: "0.1rem solid white" }}
-              onClick={() =>
-                decrementCartItemQty(encodedToken, product._id, cartDispatch)
-              }
+              onClick={() => {
+                if (product.qty > 1) {
+                  decrementCartItemQty(encodedToken, product._id, cartDispatch);
+                }
+              }}
             >
               -
             </button>
           </div>
         </div>
         <div
-          className=" m-auto absolute flex"
-          style={{ bottom: "0.5rem", right: "0.6rem", gap: "0.6rem" }}
+          className="absolute flex w-full justify-center"
+          style={{ bottom: "0.5rem", gap: "2rem", right: "0.2rem" }}
         >
-          <button
-            onClick={() =>
-              addProductToWishilist(encodedToken, product, wishlistDispatch)
-            }
-            className="btn btn-square-solid btn-xs bg-slate-900  text-white mr-3 font-bold text-2xl"
-          >
-            <span className="fas fa-heart"></span>add to wishlist
-          </button>
+          {isInWishlist ? (
+            <button
+              className="btn btn-square-solid btn-xs bg-slate-900  text-white font-bold text-2xl"
+              onClick={() =>
+                deleteWishilistItem(encodedToken, product._id, wishlistDispatch)
+              }
+            >
+              <span className="fa-solid fa-trash-can"></span>remove wishlist
+            </button>
+          ) : (
+            <button
+              onClick={() =>
+                addProductToWishilist(encodedToken, product, wishlistDispatch)
+              }
+              className="btn btn-square-solid btn-xs bg-slate-900  text-white font-bold text-2xl"
+            >
+              <span className="fas fa-heart"></span>add to wishlist
+            </button>
+          )}
           <button
             className="btn btn-square-solid btn-xs bg-slate-900 text-white text-2xl"
             onClick={() =>

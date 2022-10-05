@@ -13,6 +13,13 @@ function Home() {
       <div className="spacer-3rem"></div>
       <div className="spacer-3rem"></div>
 
+      <VideoBanner />
+
+      <div className="spacer-3rem"></div>
+      <div className="spacer-3rem"></div>
+      <div className="spacer-3rem"></div>
+      <div className="spacer-3rem"></div>
+
       <FeaturedBrands />
 
       <div className="spacer-3rem"></div>
@@ -26,14 +33,7 @@ function Home() {
       <div className="spacer-3rem"></div>
       <div className="spacer-3rem"></div>
       <div className="spacer-3rem"></div>
-
-      <VideoBanner />
-
-      <div className="spacer-3rem"></div>
-      <div className="spacer-3rem"></div>
-      <div className="spacer-3rem"></div>
     </main>
-    // <!-- main -->
   );
 }
 

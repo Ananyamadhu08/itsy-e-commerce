@@ -15,7 +15,7 @@ function Products() {
   return (
     <main
       className="relative w-full justify-end flex"
-      style={{ top: "5rem", minHeight: "100vh" }}
+      style={{ top: "1rem", minHeight: "100vh" }}
     >
       <FilterSidebar />
 
@@ -24,7 +24,7 @@ function Products() {
 
         <div
           className="grid grid-cols-3  mr-20"
-          style={{ gap: "4rem", marginTop: "-2rem" }}
+          style={{ gap: "3rem", marginTop: "-2rem" }}
         >
           {sortedProducts &&
             sortedProducts.map((product, i) => (
@@ -32,7 +32,6 @@ function Products() {
             ))}
         </div>
 
-        <div className="spacer-3rem"></div>
         <div className="spacer-3rem"></div>
         <div className="spacer-3rem"></div>
       </div>

@@ -20,25 +20,9 @@ function HeaderRight() {
   } = useWishlist();
 
   return (
-    <div className="flex justify-center align-items-center">
-      {encodedToken ? (
-        <div
-          onClick={() => authDispatch({ type: authActions.LOGOUT_SUCCESS })}
-          className="btn btn-square-solid btn-md text-white bg-rose-600 btn-bg-hover-rose-800 mr-7"
-        >
-          LOGOUT
-        </div>
-      ) : (
-        <Link
-          to="/login"
-          className="btn btn-square-solid btn-md text-white bg-rose-600 btn-bg-hover-rose-800 mr-7"
-        >
-          LOGIN
-        </Link>
-      )}
-
+    <div className="flex justify-center align-items-center gap-3">
       <Link to="/wishlist">
-        <span className="w-full h-full tooltip btn-icon badge-container mr-3">
+        <span className="w-full h-full tooltip btn-icon badge-container">
           <i className="text-rose-500 text-hover-rose-800 fas fa-heart text-4xl"></i>
           <span
             className="icon-badge-md bg-slate-100 text-black text-xs status-badge"
@@ -65,6 +49,21 @@ function HeaderRight() {
           </span>
         </span>
       </Link>
+      {encodedToken ? (
+        <div
+          onClick={() => authDispatch({ type: authActions.LOGOUT_SUCCESS })}
+          className="btn btn-square-solid btn-md text-white bg-rose-600 btn-bg-hover-rose-800"
+        >
+          LOGOUT
+        </div>
+      ) : (
+        <Link
+          to="/login"
+          className="btn btn-square-solid btn-md text-white bg-rose-600 btn-bg-hover-rose-800"
+        >
+          LOGIN
+        </Link>
+      )}
     </div>
   );
 }
