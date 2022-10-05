@@ -5,7 +5,7 @@ import { useFilters } from "../../../contexts/providers/FiltersProvider";
 function FilterByRating() {
   const [rangeVal, setRangeVal] = useState(5);
 
-  const { filtersDispatch } = useFilters();
+  const { filtersState, filtersDispatch } = useFilters();
 
   useEffect(() => {
     filtersDispatch({
@@ -13,6 +13,10 @@ function FilterByRating() {
       payload: parseInt(rangeVal),
     });
   }, [rangeVal]);
+
+  useEffect(() => {
+    setRangeVal(filtersState.ratingLessThan);
+  }, [filtersState.ratingLessThan]);
 
   return (
     <div className="p-1">

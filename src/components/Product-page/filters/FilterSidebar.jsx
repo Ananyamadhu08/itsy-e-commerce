@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useReducer } from "react";
+import { useFilters } from "../../../contexts/providers/FiltersProvider";
 import FilterByRating from "./FilterByRating";
 import FiltersByBrand from "./FiltersByBrand";
 import FiltersByCategory from "./FiltersByCategory";
 
 function FilterSidebar() {
+  const { filtersDispatch } = useFilters();
   return (
     <div
       className="relative ml-10 p-5 filter__sidebar__container bg-slate-900 mt-10"
@@ -12,7 +14,12 @@ function FilterSidebar() {
       <div className="flex justify-between align-items-center">
         <div className="font-semibol text-xl text-rose-200">Filters</div>
 
-        <button className="btn-text-underline text-rose-200">Clear</button>
+        <button
+          className="btn-text-underline text-rose-200"
+          onClick={() => filtersDispatch({ type: "CLEAR_FILTERS" })}
+        >
+          Clear
+        </button>
       </div>
       <div className="spacer-1rem"></div>
       <FilterByRating />

@@ -27,6 +27,23 @@ export const filtersReducer = (state, action) => {
         ...state,
         sortBy: payload,
       };
+    case filterActions.CLEAR_FILTERS:
+      return {
+        ...state,
+        categories: {
+          paints: false,
+          crafting: false,
+          pens: false,
+          stationery: false,
+        },
+        brands: {
+          maped: false,
+          faberCastell: false,
+          staedtler: false,
+          crayola: false,
+        },
+        ratingLessThan: 5,
+      };
     default:
       return state;
   }
