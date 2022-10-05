@@ -8,7 +8,7 @@ function FilterSidebar() {
   const { filtersDispatch } = useFilters();
   return (
     <div
-      className="relative ml-10 p-5 filter__sidebar__container bg-slate-900 mt-10"
+      className="relative ml-10 mr-20 p-5 filter__sidebar__container bg-slate-900 mt-10"
       style={{ top: "7rem", position: "sticky" }}
     >
       <div className="flex justify-between align-items-center">

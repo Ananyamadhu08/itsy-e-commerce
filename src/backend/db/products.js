@@ -3,8 +3,8 @@ import { v4 as uuid } from "uuid";
 export const products = [
   {
     _id: uuid(),
-    title: "Crayola play Dough",
-    description: "A 5 oz pack of play dough",
+    title: "Play Dough",
+    description: "5 oz pack of play dough",
     price: 500,
     category: "crafting",
     discountPrice: 300,
@@ -23,7 +23,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Crayola colour pencils",
+    title: "Colour pencils",
     description: "Pack of 24 colour pencils",
     price: 2000,
     category: "pens",
@@ -43,8 +43,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Crayola erasable colour pencils",
-    description: "Pack of 10 erasable colour pencils",
+    title: "Erasable colour pencils",
+    description: "10 erasable colour pencils",
     price: 1500,
     category: "pens",
     discountPrice: 1000,
@@ -63,7 +63,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Crayola glitter markers",
+    title: "Glitter markers",
     description: "Pack of 6 glitter markers",
     price: 1800,
     category: "pens",
@@ -83,7 +83,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Crayola paint brushes",
+    title: "Paint brushes",
     description: "Pack of 5 brushes",
     price: 1500,
     category: "crafting",
@@ -103,7 +103,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Crayola construction paper",
+    title: "Construction paper",
     description: "Pack 48 construction papers",
     price: 1600,
     category: "crafting",
@@ -123,8 +123,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Crayola twistable coloured pencils",
-    description: "Pack of 50 twistable colored pencils",
+    title: "Twistable coloured pencils",
+    description: "50 twistable colored pencils",
     price: 2500,
     category: "pens",
     discountPrice: 2100,
@@ -143,7 +143,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Crayola washable markers",
+    title: "Washable markers",
     description: "Pack of 40 washable markers",
     price: 2600,
     category: "pens",
@@ -163,8 +163,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Crayola washable crayons",
-    description: "Pack 3 palm grasp washable crayons",
+    title: "Washable crayons",
+    description: "Pack 3 palm grasp crayons",
     price: 1500,
     category: "crafting",
     discountPrice: 1000,
@@ -183,8 +183,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Crayola water colours",
-    description: "Set of 24 water colours with brush",
+    title: "Water colours",
+    description: "Set of 24 water colours",
     price: 1700,
     category: "paints",
     discountPrice: 1300,
@@ -203,8 +203,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Crayola modeling clay",
-    description: "No bake air dry modeling clay 25lb",
+    title: "Modeling clay",
+    description: "No bake air dry modeling clay",
     price: 5000,
     category: "crafting",
     discountPrice: 4500,
@@ -223,8 +223,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell colour pencils",
-    description: "Pack of 24 triangular colour pencils",
+    title: "Colour pencils",
+    description: "24 triangular colour pencils",
     price: 500,
     category: "pens",
     discountPrice: 300,
@@ -243,7 +243,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell watercolor pad",
+    title: "Watercolor pad",
     description: "A3 watercolor pad",
     price: 700,
     category: "crafting",
@@ -263,7 +263,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell acrylic paints",
+    title: "Acrylic paints",
     description: "Set of 12 acrylic paints",
     price: 900,
     category: "paints",
@@ -283,7 +283,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell colour pencils",
+    title: "Colour pencils",
     description: "Set of 48 colour pencils",
     price: 700,
     category: "pens",
@@ -303,7 +303,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell colored markers",
+    title: "Colored markers",
     description: "Set of 4 multi coloured markers",
     price: 300,
     category: "pens",
@@ -323,7 +323,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell notebook",
+    title: "Notebook",
     description: "Notebook with 160 pages",
     price: 200,
     category: "stationery",
@@ -343,7 +343,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell artist pens",
+    title: "Artist pens",
     description: "Set of 6 soft brush artist pens",
     price: 700,
     category: "crafting",
@@ -363,7 +363,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell pastel pencils",
+    title: "Pastel pencils",
     description: "Set of 12 pastel pencils",
     price: 1500,
     category: "pens",
@@ -383,7 +383,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell poster colors",
+    title: "Poster colors",
     description: "Set of 12 poster pencils",
     price: 300,
     category: "paints",
@@ -403,7 +403,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell rollerball pen",
+    title: "Rollerball pen",
     description: "Set of 3 rollerball pens",
     price: 1200,
     category: "pens",
@@ -423,7 +423,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell watercolor pencils",
+    title: "Watercolor pencils",
     description: "Set of 120 watercolor pencils",
     price: 28000,
     category: "pens",
@@ -443,8 +443,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Faber castell washable markers",
-    description: "Set of 12 duo tip washable markers",
+    title: "Washable markers",
+    description: "Set of 12 duo tip markers",
     price: 600,
     category: "pens",
     discountPrice: 500,
@@ -463,7 +463,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Maped fineliners",
+    title: "Fineliners",
     description: "Pack of 10 duo tip fineliners",
     price: 300,
     category: "pens",
@@ -483,7 +483,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Maped box cutter",
+    title: "Box cutter",
     description: "18mm box cutter",
     price: 200,
     category: "stationery",
@@ -503,7 +503,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Maped brushes",
+    title: "Brush set",
     description: "Set of 4 brushes",
     price: 300,
     category: "crafting",
@@ -523,7 +523,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Maped geometry box",
+    title: "Geometry box",
     description: "Geometry box",
     price: 400,
     category: "stationery",
@@ -543,8 +543,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Maped loopy eraser",
-    description: "loopy duo with eraser and sharpener",
+    title: "Loopy eraser",
+    description: "loopy eraser and sharpener",
     price: 200,
     category: "stationery",
     discountPrice: 100,
@@ -563,7 +563,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Maped fountain pen",
+    title: "Fountain pen",
     description: "Set of 2 fountain pens",
     price: 300,
     category: "pens",
@@ -583,7 +583,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Maped stapler",
+    title: "Stapler",
     description: "Stapler with staple pins",
     price: 200,
     category: "stationery",
@@ -603,8 +603,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Maped colour pencils",
-    description: "Set of 50 triangular colour pencils",
+    title: "Colour pencils",
+    description: "50 triangular colour pencils",
     price: 800,
     category: "pens",
     discountPrice: 600,
@@ -623,7 +623,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Maped metallic highlighters",
+    title: "Metallic highlighters",
     description: "Set of 4 metallic highlighters",
     price: 700,
     category: "stationery",
@@ -643,7 +643,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Staedtler acrylic paint",
+    title: "Acrylic paint",
     description: "Set of 24 acrylic paints",
     price: 2100,
     category: "paints",
@@ -663,7 +663,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Staedtler eraser",
+    title: "Eraser",
     description: "dust free art eraser",
     price: 200,
     category: "stationery",
@@ -683,7 +683,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Staedtler fineliners",
+    title: "Fineliners",
     description: "Pack of 30 fineliners",
     price: 2500,
     category: "pens",
@@ -703,7 +703,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Staedtler pencils",
+    title: "Pencils",
     description: "Pack of 12 drawing pencils",
     price: 1300,
     category: "pens",
@@ -723,7 +723,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Staedtler scissors",
+    title: "Scissors",
     description: "14cm scissors",
     price: 300,
     category: "stationery",
@@ -743,7 +743,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Staedtler highlighters",
+    title: "Highlighters",
     description: "Pack of 6 highlighters",
     price: 400,
     category: "stationery",
@@ -763,7 +763,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Staedtler sharpener",
+    title: "Sharpener",
     description: "Single pencil tub sharpener",
     price: 900,
     category: "stationery",
@@ -783,7 +783,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Staedtler triplus fineliners",
+    title: "Triplus fineliners",
     description: "Pack of 10 triplus fineliners",
     price: 1200,
     category: "pens",
@@ -803,8 +803,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Staedtler pigment liner",
-    description: "Pack of 8 black pigment liners and mechanical pencil",
+    title: "Pigment liner",
+    description: "8 black pigment liners",
     price: 1600,
     category: "pens",
     discountPrice: 1300,
