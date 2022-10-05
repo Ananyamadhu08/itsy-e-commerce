@@ -97,8 +97,7 @@ function CartPageCard({ product }) {
                 deleteWishilistItem(encodedToken, product._id, wishlistDispatch)
               }
             >
-              <span className="fa-solid fa-trash-can"></span>remove from
-              wishlist
+              <span className="fa-solid fa-trash-can"></span>remove wishlist
             </button>
           ) : (
             <button
