@@ -7,7 +7,10 @@ import {
   decrementCartItemQty,
   deleteCartItem,
 } from "../../utils/cartUtils";
-import { addProductToWishilist } from "../../utils/wishlistUtils";
+import {
+  addProductToWishilist,
+  deleteWishilistItem,
+} from "../../utils/wishlistUtils";
 
 function CartPageCard({ product }) {
   const {
@@ -15,7 +18,12 @@ function CartPageCard({ product }) {
   } = useAuth();
   const { cartDispatch } = useCart();
 
-  const { wishlistDispatch } = useWishlist();
+  const {
+    wishlistState: { wishlist },
+    wishlistDispatch,
+  } = useWishlist();
+
+  const isInWishlist = wishlist.find((item) => item._id === product._id);
 
   return (
     <div className="shadow-2xl rounded flex flex-col relative w-72 mb-12 ml-12 bg-rose-200 cart_page_card">
@@ -79,17 +87,29 @@ function CartPageCard({ product }) {
           </div>
         </div>
         <div
-          className=" m-auto absolute flex"
-          style={{ bottom: "0.5rem", right: "0.6rem", gap: "0.6rem" }}
+          className="absolute flex w-full justify-center"
+          style={{ bottom: "0.5rem", gap: "2rem", right: "0.2rem" }}
         >
-          <button
-            onClick={() =>
-              addProductToWishilist(encodedToken, product, wishlistDispatch)
-            }
-            className="btn btn-square-solid btn-xs bg-slate-900  text-white mr-3 font-bold text-2xl"
-          >
-            <span className="fas fa-heart"></span>add to wishlist
-          </button>
+          {isInWishlist ? (
+            <button
+              className="btn btn-square-solid btn-xs bg-slate-900  text-white font-bold text-2xl"
+              onClick={() =>
+                deleteWishilistItem(encodedToken, product._id, wishlistDispatch)
+              }
+            >
+              <span className="fa-solid fa-trash-can"></span>remove from
+              wishlist
+            </button>
+          ) : (
+            <button
+              onClick={() =>
+                addProductToWishilist(encodedToken, product, wishlistDispatch)
+              }
+              className="btn btn-square-solid btn-xs bg-slate-900  text-white font-bold text-2xl"
+            >
+              <span className="fas fa-heart"></span>add to wishlist
+            </button>
+          )}
           <button
             className="btn btn-square-solid btn-xs bg-slate-900 text-white text-2xl"
             onClick={() =>
