@@ -2,9 +2,9 @@ import React from "react";
 
 function VideoBanner() {
   return (
-    <div className="hompage__iframe">
+    <div className="hompage__iframe flex justify-center">
       <iframe
-        className="w-full h-96"
+        className="w-90-percent h-96"
         src="https://www.youtube.com/embed/zOnWsfucES0"
         title="YouTube video player"
         frameborder="0"
